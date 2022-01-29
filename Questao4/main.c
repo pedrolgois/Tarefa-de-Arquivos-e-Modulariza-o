@@ -12,20 +12,20 @@ int main(void) {
   FILE* log; 
   log = fopen("log.txt", "a");
 
-  struct tm *data_inicio; 
+  struct tm *date_start; 
   time(&start);  
-  data_inicio = localtime(&start);
-  fprintf(log, "Data: %d/%d/%d\n", data_inicio->tm_mday, data_inicio->tm_mon+1, data_inicio->tm_year+1900);
-  fprintf(log, "Inicio: %d:%d:%d\n", data_inicio->tm_hour, data_inicio->tm_min, data_inicio->tm_sec);
+  date_start = localtime(&start);
+  fprintf(log, "Data: %d/%d/%d\n", date_start->tm_mday, date_start->tm_mon+1, date_start->tm_year+1900);
+  fprintf(log, "Inicio do programa: %d:%d:%d\n", date_start->tm_hour, date_start->tm_min, date_start->tm_sec);
  
   do{
     scanf("%s", SAIR);
   } while (strcmp(SAIR, "SAIR") != 0);
 
-  struct tm *data_fim;
+  struct tm *date_end;
   time(&end);
-  data_fim = localtime(&end);
-  fprintf(log, "Fim: %d:%d:%d\n", data_fim->tm_hour, data_fim->tm_min, data_fim->tm_sec);
+  date_end = localtime(&end);
+  fprintf(log, "Fim do programa: %d:%d:%d\n", date_end->tm_hour, date_end->tm_min, date_end->tm_sec);
   fclose(log);
   // Fim do arquivo
 

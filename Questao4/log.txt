@@ -1,6 +1,3 @@
 Data: 28/1/2022
-Inicio: 21:4:6
-Fim: 21:4:10
-Data: 27/1/2022
-Inicio: 21:7:16
-Fim: 21:7:18
+Inicio do programa: 21:40:06
+Fim do programa: 21:40:14
